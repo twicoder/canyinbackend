@@ -74,4 +74,9 @@ public class FriendController {
             return friendService.findAll();
         }
     }
+
+    @GetMapping("/wrong")
+    Friend somethingIsWrong() {
+        throw new ValidationException("Something is wrong");
+    }
 }
